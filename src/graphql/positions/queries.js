@@ -11,6 +11,11 @@ query getPositions($competition: Int) {
 			points
 			winsReplica
 			losesReplica
+			participant {
+				id
+				name
+				imageUrl
+			}
 			competition {
 				id
 				name
