@@ -1,0 +1,20 @@
+.fms-table {
+	@apply w-full;
+	border-spacing: 0;
+	th, td {
+		margin: 0;
+		padding: 0.5rem;
+	}
+	th:last-child, td:last-child {
+		border-right: 0;
+	}
+	tbody tr {
+		background-color: #1e2129;
+	}
+	tr:nth-child(even), thead tr {
+		background-color: #21252f;
+	}
+	tr:last-child td {
+		border-bottom: 0;
+	}	
+}
