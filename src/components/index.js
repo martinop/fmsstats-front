@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from './Box';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <p className="text-red-500">
           Tailwind x2
         </p>
+        <Box>
+          <h4>Hi</h4>
+        </Box>
       </div>
     </div>
   );
