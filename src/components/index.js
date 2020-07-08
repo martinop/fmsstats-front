@@ -7,7 +7,7 @@ function App() {
         <h1 className="text-2xl text-blue-700 leading-tight">
           Tailwind
         </h1>
-        <p className="text-base text-gray-700 leading-normal">
+        <p className="text-red-500">
           Tailwind x2
         </p>
       </div>

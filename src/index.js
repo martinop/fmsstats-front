@@ -1,12 +1,20 @@
 import React from 'react';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
 import ReactDOM from 'react-dom';
 import App from './components';
 import * as serviceWorker from './serviceWorker';
 import './tailwind.output.css';
 
+const client = new ApolloClient({
+  uri: process.env.REACT_APP_API_URL
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
