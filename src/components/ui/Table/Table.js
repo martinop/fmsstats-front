@@ -41,7 +41,7 @@ function Table(props) {
 					(row, i) => {
 						prepareRow(row);
 						return (
-							<tr {...row.getRowProps()}>
+							<tr {...row.getRowProps()} className="bg-gray-900">
 								{row.cells.map(cell => {
 									return (
 										<td {...cell.getCellProps()} className="text-center">{cell.render('Cell')}</td>
