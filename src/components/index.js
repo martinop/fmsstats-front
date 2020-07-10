@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from './ui/Box';
 import FreestylersTable from './FreestylersTable';
+import GeneralMatches from './GeneralMatchesStats';
 
 // const data = [
 //   {name: "Chuty", wins: 10, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
@@ -18,6 +19,7 @@ function App() {
     <div>
       <div className="p-12 flex justify-between items-start">
         <div className="w-3/5">
+          <GeneralMatches />
           <FreestylersTable />
         </div>
         <Box className="w-2/5 ml-8">
