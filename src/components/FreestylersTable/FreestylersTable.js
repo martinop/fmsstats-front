@@ -20,7 +20,7 @@ function FreestylersTable(props) {
     variables: { competition },
     fetchPolicy: 'cache-and-network',
 	})
-	const positions = data?.positions?.data;
+	const positions = data?.positions?.data || [];
 	if(loading) {
 		return (
 			<div className="font-bold text-white">

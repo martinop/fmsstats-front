@@ -19,7 +19,7 @@ function WordsList(props) {
 		<Box>
 			<h2>Palabras más usadas</h2>
 			<div className="flex flex-wrap mt-2">
-				{words.map((word, index) => (
+				{words?.map((word, index) => (
 					<div key={`word-stat-${index + 1}`}>
 						<Chip text={word.value} circleText={word.count} />
 					</div>
