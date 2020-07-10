@@ -20,7 +20,7 @@
     "build:tailwind": "tailwind build src/tailwind.css -o src/tailwind.output.css",
     "start": "npm run build:tailwind && npm run start:react",
     "start:react": "craco start",
-    "prebuild": "NODE_ENV=production run-s build:tailwind",
+    "prebuild": "NODE_ENV=production npm run build:tailwind",
     "build": "craco build",
     "eject": "craco eject"
   },
