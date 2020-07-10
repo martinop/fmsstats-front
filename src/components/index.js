@@ -1,18 +1,7 @@
 import React from 'react';
-import Box from './ui/Box';
 import FreestylersTable from './FreestylersTable';
 import GeneralMatches from './GeneralMatchesStats';
-
-// const data = [
-//   {name: "Chuty", wins: 10, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 9, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 8, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 7, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 6, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 5, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 4, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-//   {name: "Chuty", wins: 3, loses: 0, winsReplica: 0, losesReplica: 0, points: 0, ptb: 0 },
-// ];
+import WordsList from './WordsList';
 
 function App() {
   return (
@@ -22,9 +11,9 @@ function App() {
           <GeneralMatches />
           <FreestylersTable />
         </div>
-        <Box className="w-2/5 ml-8">
-          <h4>Hi</h4>
-        </Box>
+        <div className="w-2/5 ml-8">
+          <WordsList />
+        </div>
       </div>
 
     </div>

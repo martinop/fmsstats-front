@@ -11,9 +11,10 @@ function GeneralMatchesStats(props) {
     variables: { competition },
     fetchPolicy: 'cache-and-network',
 	})
-	const stats = data?.generalStats;
-	console.log(stats);
+
 	if(loading) return null;
+
+	const stats = data?.generalStats;
 	const statsArr = [
 		{ label: "Vic. Directas", value: stats?.directWins, className: 'w-1/3 pr-4' },
 		{ label: "Réplicas", value: stats?.replica, className: 'w-1/3 px-4' },
@@ -21,8 +22,8 @@ function GeneralMatchesStats(props) {
 	]
 	return (
 		<div className="mb-8 flex">
-			{statsArr.map(stat => (
-				<div className={stat?.className}>
+			{statsArr.map((stat, index) => (
+				<div className={stat?.className} key={`match-stat-${index + 1}`}>
 					<div />
 					<Box className="flex">
 						<div>

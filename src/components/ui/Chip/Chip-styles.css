@@ -1,0 +1,18 @@
+.chip {
+	@apply m-2 bg-gray-800 flex;
+	border-radius: 16px;
+	white-space: nowrap;
+	width: fit-content;
+	&__text {
+		@apply ml-2 mr-3;
+    font-size: 14px;
+    line-height: 32px;
+    white-space: nowrap;
+	}
+	&__circle {
+		@apply flex items-center justify-center;
+		width: 30px;
+		border-radius: 100%;
+		background-color: #485275;
+	}
+}

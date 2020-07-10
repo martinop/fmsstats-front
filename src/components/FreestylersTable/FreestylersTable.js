@@ -21,7 +21,6 @@ function FreestylersTable(props) {
     fetchPolicy: 'cache-and-network',
 	})
 	const positions = data?.positions?.data;
-	console.log(positions);
 	if(loading) {
 		return (
 			<div className="font-bold text-white">
