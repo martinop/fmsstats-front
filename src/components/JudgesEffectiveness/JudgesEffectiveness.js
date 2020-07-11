@@ -17,7 +17,6 @@ function JudgesEffectiveness(props) {
 	if(loading) return null;
 
 	const judgesStats = competition ? data?.competition?.stats?.mostEffectiveJudges : data?.globalStats?.mostEffectiveJudges || [];
-	console.log(data);
 	return (
 		<Box className="mt-8" borderer>
 			<h2>Jueces con más aciertos</h2>

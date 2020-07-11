@@ -1,23 +1,23 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_MATCHES_STATS } from '../../graphql/matches/queries';
+import { GET_MATCHES_STATS, GET_GLOBAL_MATCHES_STATS } from '../../graphql/matches/queries';
 import Box from '../ui/Box';
 
 const valueTextClass = "text-5xl leading-tight"
 
 function GeneralMatchesStats(props) {
 	const { competition } = props;
-	const { data, loading } = useQuery(GET_MATCHES_STATS, {
-    variables: { competition },
-    fetchPolicy: 'cache-and-network',
+	const { data, loading } = useQuery(competition ? GET_MATCHES_STATS : GET_GLOBAL_MATCHES_STATS, {
+		fetchPolicy: 'cache-and-network',
+		...competition && { variables: { competition }},
 	})
-
+	
 	if(loading) return null;
 
-	const stats = data?.generalStats;
+	const stats = competition ? data?.competition?.stats?.stats : data?.globalStats
 	const statsArr = [
 		{ label: "Vic. Directas", value: stats?.directWins, className: 'w-1/3 pr-4' },
-		{ label: "Réplicas", value: stats?.replica, className: 'w-1/3 px-4' },
+		{ label: "Réplicas", value: stats?.replicas, className: 'w-1/3 px-4' },
 		{ label: "Batallas", value: stats?.played, className: 'w-1/3 pl-4' },
 	]
 	return (
