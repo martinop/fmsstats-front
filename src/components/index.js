@@ -3,22 +3,29 @@ import FreestylersTable from './FreestylersTable';
 import GeneralMatches from './GeneralMatchesStats';
 import WordsList from './WordsList';
 import JudgesEffectiveness from './JudgesEffectiveness';
+import CompetitionList from './CompetitionsList';
+import { Provider } from '../context/competition';
+import MostMatchesStats from './MostMatchesStats';
 
 function App() {
   return (
-    <div>
-      <div className="p-12 flex justify-between items-start">
-        <div className="w-3/5">
-          <GeneralMatches />
-          <FreestylersTable />
-        </div>
-        <div className="w-2/5 ml-8">
-          <WordsList />
-          <JudgesEffectiveness />
+    <Provider>
+      <div>
+        <div className="p-12 flex justify-between items-start">
+          <div className="w-3/5">
+            <CompetitionList />
+            <GeneralMatches />
+            <FreestylersTable />
+          </div>
+          <div className="w-2/5 ml-8">
+            <WordsList />
+            <JudgesEffectiveness />
+            <MostMatchesStats />
+          </div>
         </div>
       </div>
+    </Provider>
 
-    </div>
   );
 }
 

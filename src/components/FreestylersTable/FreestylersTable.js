@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import PropTypes from 'prop-types';
 import Table from '../ui/Table';
 import { GET_POSITIONS_TABLE, GET_GLOBAL_POSITIONS_TABLE } from '../../graphql/positions/queries';
+import ActiveCompetitionContext from '../../context/competition';
 
 
 const columns = [
@@ -14,14 +15,13 @@ const columns = [
 	{ Header: 'PTB', accessor: 'ptb' },
 	{ Header: 'PTS.', accessor: 'points' },
 ];
-function FreestylersTable(props) {
-	const competition = 1;
+function FreestylersTable() {
+	const { competition } = useContext(ActiveCompetitionContext);
 	const { data, loading } = useQuery(competition ? GET_POSITIONS_TABLE : GET_GLOBAL_POSITIONS_TABLE, {
 		fetchPolicy: 'cache-and-network',
 		...competition && { variables: { competition },	}
 	})
 	const positions = competition ? data?.positions : data?.positions || [];
-	console.log(data)
 	if(loading) {
 		return (
 			<div className="font-bold text-white">
