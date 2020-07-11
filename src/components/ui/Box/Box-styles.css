@@ -1,3 +1,10 @@
 .box {
-  @apply bg-gray-900 text-white py-3 px-4 rounded-md shadow-md;
+  @apply bg-gray-900 text-white py-3 px-4 rounded-md shadow-md relative;
+  &.borderer:before {
+    @apply absolute bg-indigo-600;
+    width: 45px;
+    top: 0;
+    height: 3px;
+    content: "";
+  }
 }

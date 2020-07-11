@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import PropTypes from 'prop-types';
 import Table from '../ui/Table';
-import { GET_POSITIONS_TABLE } from '../../graphql/positions/queries';
+import { GET_POSITIONS_TABLE, GET_GLOBAL_POSITIONS_TABLE } from '../../graphql/positions/queries';
 
 
 const columns = [
@@ -16,7 +16,7 @@ const columns = [
 ];
 function FreestylersTable(props) {
 	const { competition } = props;
-	const { data, loading } = useQuery(GET_POSITIONS_TABLE, {
+	const { data, loading } = useQuery(competition ? GET_GLOBAL_POSITIONS_TABLE : GET_POSITIONS_TABLE, {
     variables: { competition },
     fetchPolicy: 'cache-and-network',
 	})

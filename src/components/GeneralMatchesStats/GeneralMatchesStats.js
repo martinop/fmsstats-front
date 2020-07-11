@@ -25,7 +25,7 @@ function GeneralMatchesStats(props) {
 			{statsArr.map((stat, index) => (
 				<div className={stat?.className} key={`match-stat-${index + 1}`}>
 					<div />
-					<Box className="flex">
+					<Box className="flex" borderer>
 						<div>
 							<h3>{stat?.label}</h3>
 							<h1 className={valueTextClass}>{stat?.value}</h1>

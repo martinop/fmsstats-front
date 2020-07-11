@@ -2,8 +2,11 @@ import React from 'react';
 import FreestylersTable from './FreestylersTable';
 import GeneralMatches from './GeneralMatchesStats';
 import WordsList from './WordsList';
+import JudgesEffectiveness from './JudgesEffectiveness';
+// import useParticipants from '../hooks/useParticipants';
 
 function App() {
+  // useParticipants();
   return (
     <div>
       <div className="p-12 flex justify-between items-start">
@@ -13,6 +16,7 @@ function App() {
         </div>
         <div className="w-2/5 ml-8">
           <WordsList />
+          <JudgesEffectiveness />
         </div>
       </div>
 
