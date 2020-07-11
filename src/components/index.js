@@ -3,10 +3,8 @@ import FreestylersTable from './FreestylersTable';
 import GeneralMatches from './GeneralMatchesStats';
 import WordsList from './WordsList';
 import JudgesEffectiveness from './JudgesEffectiveness';
-// import useParticipants from '../hooks/useParticipants';
 
 function App() {
-  // useParticipants();
   return (
     <div>
       <div className="p-12 flex justify-between items-start">
