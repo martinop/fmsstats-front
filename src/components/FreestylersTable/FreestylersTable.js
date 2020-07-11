@@ -15,12 +15,13 @@ const columns = [
 	{ Header: 'PTS.', accessor: 'points' },
 ];
 function FreestylersTable(props) {
-	const { competition } = props;
-	const { data, loading } = useQuery(competition ? GET_GLOBAL_POSITIONS_TABLE : GET_POSITIONS_TABLE, {
-    variables: { competition },
-    fetchPolicy: 'cache-and-network',
+	const competition = 1;
+	const { data, loading } = useQuery(competition ? GET_POSITIONS_TABLE : GET_GLOBAL_POSITIONS_TABLE, {
+		fetchPolicy: 'cache-and-network',
+		...competition && { variables: { competition },	}
 	})
-	const positions = data?.positions?.data || [];
+	const positions = competition ? data?.positions : data?.positions || [];
+	console.log(data)
 	if(loading) {
 		return (
 			<div className="font-bold text-white">
