@@ -22,7 +22,7 @@ function App() {
       <div className="bg-gray-900 pl-12 flex items-center h-16 w-full shadow-md">
         <img src="/logo.png" className="h-12"  alt="logo" />
       </div>
-      <div>
+      <div className="min-h-screen">
         <div className="p-12 flex flex-col sm:flex-row justify-between items-start">
           <div className="w-full sm:w-8/5">
             {/* <CompetitionList /> */}
