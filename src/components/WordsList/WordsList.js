@@ -15,7 +15,7 @@ function WordsList(props) {
 
 	const words = competition ? data?.competition?.stats?.mostUsedWords : data?.globalStats?.mostUsedWords || [];
 	return (
-		<Box borderer>
+		<Box borderer className="mt-8">
 			<h2>Palabras más usadas</h2>
 			<div className="flex flex-wrap mt-2">
 				{words?.map((word, index) => (

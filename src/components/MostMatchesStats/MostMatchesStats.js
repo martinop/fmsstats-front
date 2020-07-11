@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ActiveCompetitionContext from '../../context/competition';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_GLOBAL_MOST_MATCHES_STATS } from '../../graphql/matches/queries';
+import { GET_GLOBAL_MOST_MATCHES_STATS, GET_MOST_MATCHES_STATS } from '../../graphql/matches/queries';
 import Box from '../ui/Box';
 
 const pointsClass = "text-indigo-600 leading-none text-3xl font-bold";
@@ -40,29 +40,29 @@ function VersusRow(props) {
 
 function MostMatchesStats() {
 	const { competition } = useContext(ActiveCompetitionContext);
-	const { data, loading } = useQuery(GET_GLOBAL_MOST_MATCHES_STATS, {
+	const { data, loading } = useQuery(competition ? GET_MOST_MATCHES_STATS : GET_GLOBAL_MOST_MATCHES_STATS, {
 		...competition && { variables: { id: competition }},
     fetchPolicy: 'cache-and-network',
 	})
 	if(loading) return null;
 
-	const stats = data?.globalStats;
+	const stats = competition ? data?.competition?.stats : data?.globalStats;
 	return (
 		<div>
 			{stats.mostPointsMatch && (
-				<Box className="mt-4">
+				<Box borderer>
 					<h2>Batalla más puntuada</h2>
 					<VersusRow {...stats?.mostPointsMatch || {}} />
 				</Box>
 			)}
 			{stats.mostEvenMatch && (
-				<Box className="mt-4">
+				<Box className="mt-8" borderer>
 					<h2>Batalla más pareja</h2>
 					<VersusRow {...stats?.mostEvenMatch || {}} />
 				</Box>
 			)}
 			{stats.mostUnevenMatch && (
-				<Box className="mt-4">
+				<Box className="mt-8" borderer>
 					<h2>Batalla más dispareja</h2>
 					<VersusRow {...stats?.mostUnevenMatch || {}} />
 				</Box>

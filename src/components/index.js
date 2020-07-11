@@ -18,9 +18,9 @@ function App() {
             <FreestylersTable />
           </div>
           <div className="w-2/5 ml-8">
+            <MostMatchesStats />
             <WordsList />
             <JudgesEffectiveness />
-            <MostMatchesStats />
           </div>
         </div>
       </div>
