@@ -49,19 +49,19 @@ function MostMatchesStats() {
 	const stats = competition ? data?.competition?.stats : data?.globalStats;
 	return (
 		<div>
-			{stats.mostPointsMatch && (
+			{stats?.mostPointsMatch && (
 				<Box borderer>
 					<h2>Batalla más puntuada</h2>
 					<VersusRow {...stats?.mostPointsMatch || {}} />
 				</Box>
 			)}
-			{stats.mostEvenMatch && (
+			{stats?.mostEvenMatch && (
 				<Box className="mt-8" borderer>
 					<h2>Batalla más pareja</h2>
 					<VersusRow {...stats?.mostEvenMatch || {}} />
 				</Box>
 			)}
-			{stats.mostUnevenMatch && (
+			{stats?.mostUnevenMatch && (
 				<Box className="mt-8" borderer>
 					<h2>Batalla más dispareja</h2>
 					<VersusRow {...stats?.mostUnevenMatch || {}} />
