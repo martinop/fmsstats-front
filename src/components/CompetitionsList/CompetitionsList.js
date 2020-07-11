@@ -20,7 +20,7 @@ function CompetitionsList() {
 						<img
 							src={competition?.imageUrl}
 							alt={competition?.name}
-							className="w-16 h-16 object-center"
+							className="w-12 h-12 object-center"
 							onClick={() => onChangeCompetition(isActive ? null : competition.id)}
 						/>
 					</div>

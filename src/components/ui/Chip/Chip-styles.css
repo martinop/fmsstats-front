@@ -3,10 +3,12 @@
 	border-radius: 16px;
 	white-space: nowrap;
 	width: fit-content;
+	justify-content: center;
+  align-items: center;
 	&__text {
 		@apply ml-2 mr-3;
     font-size: 14px;
-    line-height: 32px;
+    line-height: 1;
     white-space: nowrap;
 	}
 	&__circle {
