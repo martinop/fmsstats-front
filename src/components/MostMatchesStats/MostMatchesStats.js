@@ -6,30 +6,29 @@ import Box from '../ui/Box';
 
 const pointsClass = "text-indigo-600 leading-none text-3xl font-bold";
 
-
 function VersusRow(props) {
 	const { home, away, homePoints, awayPoints } = props;
 	return (
-		<div className="flex mt-4">
+		<div className="flex flex-wrap mt-4">
 			<div className="flex">
 				<img
 					src={home?.imageUrl}
 					alt={home?.name}
-					className="rounded-full w-16 h-16 object-cover"
+					className="rounded-full w-12 h-12 object-cover"
 				/>
-				<div className="ml-4">
+				<div className="ml-2">
 					<h4>{home?.name}</h4>
 					<h2 className={pointsClass}>{homePoints}</h2>
 				</div>
 			</div>
-			<h1 className="my-auto mx-4 text-3xl">VS</h1>
+			<h1 className="my-auto mx-3 text-3xl">VS</h1>
 			<div className="flex">
 				<img
 					src={away?.imageUrl}
 					alt={away?.name}
-					className="rounded-full w-16 h-16 object-cover"
+					className="rounded-full w-12 h-12 object-cover"
 				/>
-				<div className="ml-4">
+				<div className="ml-2">
 					<h4>{away?.name}</h4>
 					<h2 className={pointsClass}>{awayPoints}</h2>
 				</div>
@@ -51,19 +50,19 @@ function MostMatchesStats() {
 		<div>
 			{stats?.mostPointsMatch && (
 				<Box borderer>
-					<h2>Batalla más puntuada</h2>
+					<h2 className="text-2xl">Batalla más puntuada</h2>
 					<VersusRow {...stats?.mostPointsMatch || {}} />
 				</Box>
 			)}
 			{stats?.mostEvenMatch && (
 				<Box className="mt-8" borderer>
-					<h2>Batalla más pareja</h2>
+					<h2 className="text-2xl">Batalla más pareja</h2>
 					<VersusRow {...stats?.mostEvenMatch || {}} />
 				</Box>
 			)}
 			{stats?.mostUnevenMatch && (
 				<Box className="mt-8" borderer>
-					<h2>Batalla más dispareja</h2>
+					<h2 className="text-2xl">Batalla más dispareja</h2>
 					<VersusRow {...stats?.mostUnevenMatch || {}} />
 				</Box>
 			)}

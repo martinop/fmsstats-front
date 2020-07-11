@@ -28,7 +28,7 @@ function GeneralMatchesStats() {
 					<div />
 					<Box className="flex" borderer>
 						<div>
-							<h3>{stat?.label}</h3>
+							<h3 className="text-2xl">{stat?.label}</h3>
 							<h1 className={valueTextClass}>{stat?.value}</h1>
 						</div>
 					</Box>
