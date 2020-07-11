@@ -9,7 +9,7 @@ const pointsClass = "text-indigo-600 leading-none text-3xl font-bold";
 function VersusRow(props) {
 	const { home, away, homePoints, awayPoints } = props;
 	return (
-		<div className="flex mt-4">
+		<div className="flex flex-wrap mt-4">
 			<div className="flex">
 				<img
 					src={home?.imageUrl}
@@ -21,7 +21,7 @@ function VersusRow(props) {
 					<h2 className={pointsClass}>{homePoints}</h2>
 				</div>
 			</div>
-			<h1 className="my-auto mx-6 text-3xl">VS</h1>
+			<h1 className="my-auto mx-3 text-3xl">VS</h1>
 			<div className="flex">
 				<img
 					src={away?.imageUrl}
