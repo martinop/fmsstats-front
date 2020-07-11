@@ -6,6 +6,7 @@ import JudgesEffectiveness from './JudgesEffectiveness';
 // import CompetitionList from './CompetitionsList';
 import { Provider } from '../context/competition';
 import MostMatchesStats from './MostMatchesStats';
+import MostLessVotingJudge from './MostLessVotingJudge/MostLessVotingJudge';
 
 function App() {
   // return (
@@ -20,15 +21,22 @@ function App() {
     <Provider>
       <div>
         <div className="p-12 flex flex-col sm:flex-row justify-between items-start">
-          <div className="w-full s m:w-3/5">
+          <div className="w-full sm:w-8/5">
             {/* <CompetitionList /> */}
             <GeneralMatches />
-            <FreestylersTable />
+            <div className="flex">
+              <div className="w-2/3 pr-4">
+                <FreestylersTable />
+              </div>
+              <div className="w-1/3 pl-4">
+                <MostLessVotingJudge />
+                <JudgesEffectiveness />
+              </div>
+            </div>
           </div>
-          <div className="w-full sm:w-2/5 mt-8 md:ml-8 md:mt-0">
+          <div className="w-full sm:w-4/12 mt-8 md:ml-8 md:mt-0">
             <MostMatchesStats />
             <WordsList />
-            <JudgesEffectiveness />
           </div>
         </div>
       </div>

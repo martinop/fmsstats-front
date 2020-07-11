@@ -6,7 +6,6 @@ import Box from '../ui/Box';
 
 const pointsClass = "text-indigo-600 leading-none text-3xl font-bold";
 
-
 function VersusRow(props) {
 	const { home, away, homePoints, awayPoints } = props;
 	return (

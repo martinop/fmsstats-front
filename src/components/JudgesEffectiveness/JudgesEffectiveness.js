@@ -27,7 +27,7 @@ function JudgesEffectiveness() {
 						<img src={stat.judge.imageUrl} alt={stat.judge.name} className={imageClass} />
 						<div className="ml-4 flex-1">
 							<h4>{stat.judge.name}</h4>
-							<h2 className={percentageClass}>{stat.effectiveness * 100}%</h2>
+							<h2 className={percentageClass}>{(stat.effectiveness * 100).toFixed(0)}%</h2>
 						</div>
 					</div>
 				))}
