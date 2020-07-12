@@ -21,9 +21,9 @@ function JudgesEffectiveness() {
 	return (
 		<Box className="mt-8" borderer>
 			<h2 className="text-2xl">Jueces con más aciertos</h2>
-			<div className="flex flex-wrap mt-4">
+			<div className="flex flex-wrap">
 				{judgesStats?.map((stat, index) => (
-					<div className={cx("flex pr-4 w-2/4", { 'mt-5': index > 1 })} key={`effectiveness-judge-${stat.id}`}>
+					<div className={cx("flex pr-4 w-2/4 sm:w-1/4 lg:w-full xl:w-2/4 mt-5")} key={`effectiveness-judge-${stat.id}`}>
 						<img src={stat.judge.imageUrl} alt={stat.judge.name} className={imageClass} />
 						<div className="ml-4 flex-1">
 							<h4>{stat.judge.name}</h4>

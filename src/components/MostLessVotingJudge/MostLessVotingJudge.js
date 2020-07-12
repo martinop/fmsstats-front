@@ -19,7 +19,7 @@ function MostLessVotingJudge() {
 	console.log(data)
 	return (
 		<div className="flex flex-col">
-			<Box borderer className="mb-8">
+			<Box borderer className="mb-8 mt-8 md:mt-0">
 				<h2 className="text-2xl">Juez que más puntua</h2>
 				{judgesStats?.mostVotingJudge && (
 					<div className="flex mt-4">

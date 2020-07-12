@@ -17,12 +17,12 @@ function GeneralMatchesStats() {
 
 	const stats = competition ? data?.competition?.stats : data?.globalStats
 	const statsArr = [
-		{ label: "Vic. Directas", value: stats?.directWins, className: 'w-1/3 pr-4' },
-		{ label: "Réplicas", value: stats?.replicas, className: 'w-1/3 px-4' },
-		{ label: "Batallas", value: stats?.played, className: 'w-1/3 pl-4' },
+		{ label: "Vic. Directas", value: stats?.directWins, className: 'w-2/4 md:w-1/3 pr-2 md:pr-4' },
+		{ label: "Réplicas", value: stats?.replicas, className: 'w-2/4 md:w-1/3 pl-4 md:px-4' },
+		{ label: "Batallas", value: stats?.played, className: 'w-2/4 mt-6 md:mt-0 pr-2 md:pr-0 md:w-1/3 md:pl-4' },
 	]
 	return (
-		<div className="mb-8 flex">
+		<div className="mb-8 flex flex-wrap">
 			{statsArr.map((stat, index) => (
 				<div className={stat?.className} key={`match-stat-${index + 1}`}>
 					<div />

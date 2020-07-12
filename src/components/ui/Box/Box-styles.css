@@ -1,5 +1,5 @@
 .box {
-  @apply bg-gray-900 text-white pt-3 pb-4 px-4 rounded-md shadow-md relative;
+  @apply bg-gray-900 text-white p-4 rounded-md shadow-md relative;
   &.borderer:before {
     @apply absolute bg-indigo-600;
     width: 45px;
