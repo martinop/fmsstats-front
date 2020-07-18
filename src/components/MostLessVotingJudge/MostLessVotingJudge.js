@@ -16,7 +16,6 @@ function MostLessVotingJudge() {
 	if(loading) return null;
 
 	const judgesStats = competition ? data?.competition?.stats : data?.globalStats;
-	console.log(data)
 	return (
 		<div className="flex flex-col">
 			<Box borderer className="mb-8 mt-8 md:mt-0">

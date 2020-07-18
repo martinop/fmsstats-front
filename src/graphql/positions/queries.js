@@ -18,6 +18,7 @@ query getPositions($competition: Int!) {
 		competition {
 			id
 			name
+			imageUrl
 		}
 	}
 }
@@ -42,6 +43,7 @@ export const GET_GLOBAL_POSITIONS_TABLE = gql`
 			competition {
 				id
 				name
+				imageUrl
 			}
 		}
 	}

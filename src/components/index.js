@@ -3,7 +3,7 @@ import FreestylersTable from './FreestylersTable';
 import GeneralMatches from './GeneralMatchesStats';
 import WordsList from './WordsList';
 import JudgesEffectiveness from './JudgesEffectiveness';
-// import CompetitionList from './CompetitionsList';
+import CompetitionList from './CompetitionsList';
 import { Provider } from '../context/competition';
 import MostMatchesStats from './MostMatchesStats';
 import MostLessVotingJudge from './MostLessVotingJudge/MostLessVotingJudge';
@@ -25,7 +25,7 @@ function App() {
       <div className="min-h-screen">
         <div className="p-6 lg:p-12 flex flex-col lg:flex-row justify-between items-start">
           <div className="w-full lg:w-9/12">
-            {/* <CompetitionList /> */}
+            <CompetitionList />
             <GeneralMatches />
             <div className="flex flex-wrap">
               <div className="w-full lg:w-2/3 lg:pr-4 overflow-auto">
