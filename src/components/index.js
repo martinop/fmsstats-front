@@ -20,7 +20,7 @@ function App() {
   return (
     <Provider>
       <div className="bg-gray-900 pl-12 flex items-center h-16 w-full shadow-md">
-        <img src="/logo.png" className="h-12"  alt="logo" />
+        <img src="/logo.png" className="h-8"  alt="logo" />
       </div>
       <div className="min-h-screen">
         <div className="p-6 lg:p-12 flex flex-col lg:flex-row justify-between items-start">
