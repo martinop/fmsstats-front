@@ -37,7 +37,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-3/12 mt-8 lg:ml-8 lg:mt-0">
+          <div className="w-full lg:w-3/12 mt-8 lg:ml-8 lg:mt-24">
             <MostMatchesStats />
             <WordsList />
           </div>

@@ -45,6 +45,7 @@ function MostMatchesStats() {
 	})
 	if(loading) return null;
 
+	console.log(competition);
 	const stats = competition ? data?.competition?.stats : data?.globalStats;
 	return (
 		<div>

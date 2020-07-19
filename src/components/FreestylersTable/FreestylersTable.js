@@ -17,7 +17,7 @@ function getColumns(hasCompetitionActive) {
 						src={original?.participant?.imageUrl}
 						alt={original?.participant?.name}
 					/>
-					{hasCompetitionActive && (
+					{!hasCompetitionActive && (
 						<img
 							className="h-6 w-6 mr-4 rounded-full object-cover"
 							src={original?.competition?.imageUrl}
@@ -54,7 +54,6 @@ function getColumns(hasCompetitionActive) {
 }
 function FreestylersTable() {
 	const { competition } = useContext(ActiveCompetitionContext);
-	console.log(competition)
 	const { data, loading } = useQuery(competition ? GET_POSITIONS_TABLE : GET_GLOBAL_POSITIONS_TABLE, {
 		fetchPolicy: 'cache-and-network',
 		...competition && { variables: { competition },	}
