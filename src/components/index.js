@@ -28,7 +28,7 @@ function App() {
             <CompetitionList />
             <GeneralMatches />
             <div className="flex flex-wrap">
-              <div className="w-full lg:w-2/3 lg:pr-4 overflow-auto">
+              <div className="w-full lg:w-2/3 lg:pr-4 overflow-auto" style={{ maxHeight: 700 }}>
                 <FreestylersTable />
               </div>
               <div className="w-full lg:w-1/3 lg:pl-4">
